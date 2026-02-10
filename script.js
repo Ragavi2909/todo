@@ -1,8 +1,12 @@
-function showMessage(){
-    let inputBox = document.getElementById("nameInput");
-    let userText = inputBox.value;
-    let output = document.getElementById("outputText");
-    output.innerText = userText;
+function addTask(){
+    let input = document.getElementById("taskInput");
+    let taskText = input.value;
 
-    alert("Button clicked");
+    let li = document.createElement("li");
+    li.innerText = taskText;
+
+    let list = document.getElementById("taskList");
+    list.appendChild(li);
+    
+    input.value="";
 }
